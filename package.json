@@ -1,11 +1,11 @@
 {
-  "name": "project-new-generation-25",
+  "name": " --base=/<REPO>",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build --base=/project-new-generation-25/",
+    "dev": "vite --open",
+    "build": "vite build --base=/<REPO>/",
     "preview": "vite preview"
   },
   "devDependencies": {
