@@ -1,9 +1,9 @@
-### 🌐 Choose your preferred language:
+### 🌐 Choose a language:
 
-[🇺🇦 Ukrainian](README.md) | [🇬🇧 English](README.en.md) |
-[🇩🇪 German](README.de.md)
+[🇺🇦 Українська](README.md) | [🇬🇧 English](README.en.md) |
+[🇩🇪 Deutsch](README.de.md)
 
-# EcoTote — Style That Doesn't Harm the Planet 🌱
+# GoIT JS HW-09 — Gallery and Feedback Form
 
 <!-- AUTOGEN:STATS -->
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![Terminal](https://img.shields.io/badge/mac%20terminal-000000?style=for-the-badge&logo=apple&logoColor=white&labelColor=000000)](https://support.apple.com/guide/terminal/welcome/mac) [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/) [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/) 
@@ -13,534 +13,212 @@
 [![📦 Size](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/project-new-generation-25/main/assets/db/repo-size.json)](https://github.com/VuToV-Mykola/project-new-generation-25)
 [![📄 License](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/project-new-generation-25/main/assets/db/repo-license.json)](https://github.com/VuToV-Mykola/project-new-generation-25/blob/main/LICENSE)
 
-## 📸 Скріншот проекту
+## 📸 Project Screenshot
 ![Project Screenshot](./assets/screenshot.png)
 <!-- END:AUTOGEN -->
 
-## 📋 Table of Contents
+## 🎯 About
 
-- [About the Project](#about-the-project)
-- [Project Resources](#project-resources)
-- [Technologies](#technologies)
-- [Project Structure](#project-structure)
-- [Layout Requirements](#layout-requirements)
-- [Website Sections](#website-sections)
-- [Installation](#installation)
-- [Commands](#commands)
-- [Validation](#validation)
-- [MVP Checklist](#mvp-checklist)
-- [Authors](#authors)
+Homework #9 for JavaScript. Implemented:
+- dynamic gallery with `SimpleLightbox`;
+- feedback form with `localStorage` persistence and throttling.
 
----
+## 🧩 Features
 
-## 🎯 About the Project
+- Gallery markup rendered from an image array.
+- Lightbox with captions, delay, and navigation.
+- Form state saved while typing.
+- Values restored after reload.
+- Submit validation for empty fields.
 
-**EcoTote** is a modern single-page (Landing Page) website dedicated to eco-friendly bags. The project demonstrates an environmentally responsible approach to consumption through stylish and practical textile bags.
+## 🛠 Tech Stack
 
-### Key Features:
-- ✅ Fully responsive layout (Mobile First)
-- ✅ Semantic HTML5 markup
-- ✅ Valid code (HTML, CSS, JS)
-- ✅ Optimized graphics (SVG sprite, Retina ready)
-- ✅ Accessibility (A11y)
-- ✅ SEO optimization
+- HTML5
+- CSS3
+- JavaScript (ES2025)
+- Vite
+- SimpleLightbox
+- lodash.throttle
 
----
+## 🔌 SimpleLightbox setup
 
-## 🎨 Project Resources
-
-### 📎 Resource Links
-
-| Resource | Link |
-|----------|------|
-| 🎯 **Figma Design** | [Open Design](https://www.figma.com/design/RCf95cRtisUxC8gsNFAFAp/EcoTote?node-id=5999-10563&t=nWranbIbojsrBZff-1) |
-| 📋 **Technical Specification** | [Google Sheets Specs](https://docs.google.com/spreadsheets/d/1cjTCqYsdTgFdQEhpCfu-b9m1uorSlAUOegU3T4HzVOQ/edit?usp=sharing) |
-| 👩‍🏫 **Project Mentor** | @Oksana mentor |
-
-### 📚 Additional Materials
-
-- [How to Prepare for Team HTML+CSS Project](https://goit.global/)
-- [How to Submit Project Homework in LMS](https://www.youtube.com/@GoITclub)
-
----
-
-## 🛠 Technologies
-
-| Technology | Purpose |
-|------------|---------|
-| **HTML5** | Semantic page structure |
-| **CSS3** | Styling with Mobile First approach |
-| **JavaScript (ES2025)** | Interactivity (burger menu, forms) |
-| **Vite** | Project build and optimization |
-| **Modern Normalize** | Browser styles normalization |
-| **SVG Sprite** | Icon optimization |
-
----
-
-## 📁 Project Structure
-
-```
-project-new-generation-25/
-├── src/
-│   ├── index.html              # Main page
-│   ├── main.js                 # Main JS file
-│   ├── css/                    # Styles
-│   │   ├── reset.css           # Style reset
-│   │   ├── base.css            # Base styles
-│   │   ├── container.css       # Container
-│   │   ├── header.css          # Header
-│   │   ├── hero.css            # Hero section
-│   │   ├── feature.css         # About eco-bags section
-│   │   ├── advantages.css      # Advantages section
-│   │   ├── product.css         # Assortment section
-│   │   ├── gallery.css         # Gallery section
-│   │   ├── testimonial.css     # Testimonials section
-│   │   ├── contact.css         # Support form section
-│   │   ├── footer.css          # Footer
-│   │   └── styles.css          # Main styles file
-│   ├── img/                    # Images
-│   │   ├── icons.svg           # SVG sprite
-│   │   └── icons/              # Individual icons
-│   ├── partials/               # HTML partials
-│   │   ├── header.html
-│   │   ├── hero.html
-│   │   ├── feature.html
-│   │   ├── advantages.html
-│   │   ├── product.html
-│   │   ├── gallery.html
-│   │   ├── testimonial.html
-│   │   ├── contact.html
-│   │   └── footer.html
-│   └── public/
-│       └── favicon.svg         # Site favicon
-├── logs/                       # Logs and debug files
-├── package.json                # Project dependencies
-├── vite.config.js              # Vite configuration
-└── README.md                   # Documentation
-```
-
----
-
-## 📐 Layout Requirements
-
-### Responsive Design
-
-The layout adapts to different screen sizes with breakpoints:
-
-| Device | Screen Width |
-|--------|--------------|
-| **Mobile** | from 320px |
-| **Tablet** | from 768px |
-| **Desktop** | from 1440px |
-
-### Validation
-
-Code must pass validation:
-- HTML5: [W3C Validator](https://validator.w3.org/)
-- CSS3: [CSS Validator](https://jigsaw.w3.org/css-validator/)
-- JavaScript: [JSHint](https://jshint.com/)
-
-### Optimization
-
-- ✅ Retina screen support (2x, 3x)
-- ✅ Lazy loading for images
-- ✅ SVG sprite for all icons (except logo)
-- ✅ Graphics size optimization
-- ✅ Custom fonts connection
-
-### Interactivity
-
-All clickable elements have:
-- `:hover` - style changes on hover
-- `:focus` - styling when focused
-- `:active` - styling when pressed
-- `cursor: pointer` - cursor change
-
----
-
-## 🧱 Website Sections
-
-### 1. **Header**
-
-#### Desktop version:
-- **Logo** - SVG icon with text (anchor link to home)
-- **Navigation menu** - anchor links to sections:
-  - About → `#about`
-  - Advantages → `#advantages`
-  - Assortment → `#assortment`
-  - Gallery → `#gallery`
-  - Reviews → `#feedbacks`
-  - Contacts → `#support`
-- **Contact information**:
-  - Phone: `<a href="tel:+380...">` 
-  - Email: `<a href="mailto:...@ecotote.ua">`
-
-#### Mobile/Tablet version:
-- Logo (left)
-- Burger menu button (right)
-- **Burger menu** opens via `.is-open` class
-
----
-
-### 2. **Hero Section**
-
-```html
-<h1>EcoTote — Style That Doesn't Harm the Planet</h1>
-```
-
-- Main site heading (`<h1>`)
-- Call-to-action text
-- "Buy Now" button → anchor link to `#assortment`
-- Content image (`<img>`)
-
----
-
-### 3. **About** (About Eco-Bags)
-
-```html
-<h2>Natural</h2>
-<p>Caring for the Planet</p>
-```
-
-- Section heading (`<h2>`)
-- Subheading
-- Materials description
-- Background image (`background-image`)
-
----
-
-### 4. **Advantages**
-
-```html
-<p>Advantages</p>
-<h2>Why Choose Us?</h2>
-```
-
-- List of advantages via `<ul>`
-- Each card contains:
-  - Content image
-  - Heading (`<h3>`)
-  - Description
-
----
-
-### 5. **Assortment**
-
-```html
-<h2>Our Bags</h2>
-```
-
-- Product list via `<ul>`
-- Each product card contains:
-  - Content image
-  - Product name (`<h3>`)
-  - Description
-  - Price
-  - "Buy" button (`<button type="button">`)
-
-**Button interactivity:**
-- `:hover`, `:focus`, `:active` - style changes
-
----
-
-### 6. **Gallery**
-
-```html
-<h2>Image Gallery</h2>
-<p>EcoTotes in Everyday Life</p>
-```
-
-- Image list via `<ul>`
-
----
-
-### 7. **Feedbacks** (Customer Reviews)
-
-```html
-<h2>What Our Customers Say</h2>
-```
-
-- Reviews list via `<ul>`
-- Each review contains:
-  - Rating (5 separate star icons)
-  - Review text
-  - Author
-
-**Star implementation:**
-```html
-<svg class="star star--active">...</svg>
-<svg class="star star--active">...</svg>
-<svg class="star star--active">...</svg>
-<svg class="star star--inactive">...</svg>
-<svg class="star star--inactive">...</svg>
-```
-
----
-
-### 8. **Support** (Support Form)
-
-```html
-<h2>Have Questions? Contact Us!</h2>
-<p>We're Here to Help!</p>
-```
-
-**Form contains:**
-
-1. **Name** (required):
-```html
-<input type="text" name="name" required minlength="5" maxlength="64">
-```
-
-2. **Email** (required):
-```html
-<input type="email" name="email" required 
-  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-```
-
-3. **Message** (optional):
-```html
-<textarea name="message" maxlength="500"></textarea>
-```
-
-4. **Submit button**:
-```html
-<button type="submit">Send</button>
-```
-
-**Validation:**
-- Uses `:valid` / `:invalid` for border styling
-
-**Background:** background image
-
----
-
-### 9. **Footer**
-
-- **Logo** (works like in Header)
-- **Navigation menu** (works like in Header)
-- **Social media** (opens in new tab):
-  - Instagram → `https://www.instagram.com/`
-  - LinkedIn → `https://www.linkedin.com/`
-  - YouTube → `https://www.youtube.com/`
-- **Contact information** (works like in Header)
-- **Copyright** - rights protection text
-
----
-
-## 🚀 Installation
-
-### Prerequisites
-- Node.js (v18+)
-- npm or yarn
-
-### Installation Steps
-
-1. **Clone the repository:**
+1. Install dependency:
 ```bash
-git clone https://github.com/yourusername/project-new-generation-25.git
-cd project-new-generation-25
+npm install simplelightbox
 ```
 
-2. **Install dependencies:**
+2. Import library and styles:
+```js
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+```
+
+3. Initialize the lightbox for gallery links:
+```js
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+```
+
+## 🔌 lodash.throttle setup
+
+1. Install dependency:
+```bash
+npm install lodash.throttle
+```
+
+2. Import the function:
+```js
+import throttle from 'lodash.throttle';
+```
+
+3. Use it for form state persistence:
+```js
+const persistFormState = throttle(() => {
+  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+}, 500);
+```
+
+## 📁 Structure
+
+```
+goit-js-hw-09/
+├── src/
+│   ├── 1-gallery.html
+│   ├── 2-form.html
+│   ├── css/
+│   │   ├── gallery.css
+│   │   ├── form.css
+│   │   └── styles.css
+│   └── js/
+│       ├── 1-gallery.js
+│       └── 2-form.js
+├── package.json
+└── README.en.md
+```
+
+## 🚀 Run
+
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-3. **Start Dev server:**
+2. Start dev server:
 ```bash
 npm run dev
 ```
 
-4. **Open in browser:**
-```
-http://localhost:5173
-```
-
----
-
-## 📜 Commands
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start local dev server |
-| `npm run build` | Build project for production |
-| `npm run preview` | Preview production build |
-| `npm run lint:html` | Check HTML validity |
-| `npm run lint:css` | Check CSS validity |
-| `npm run lint:js` | Check JavaScript code |
-
----
+3. Open pages:
+- `http://localhost:5173/1-gallery.html`
+- `http://localhost:5173/2-form.html`
 
 ## ✅ Validation
 
-The project must pass validation in the following tools:
+- HTML: https://validator.w3.org/
+- CSS: https://jigsaw.w3.org/css-validator/
+- JS: https://jshint.com/
 
-1. **HTML Validator:** https://validator.w3.org/
-2. **CSS Validator:** https://jigsaw.w3.org/css-validator/
-3. **JavaScript Validator:** https://jshint.com/
+## 🔗 Links
 
----
-
-## 📝 MVP Checklist (Minimum Viable Product)
-
-### Basic Tasks
-
-- [ ] Responsive layout (320px, 768px, 1440px)
-- [ ] Valid HTML5 code
-- [ ] Valid CSS3 code
-- [ ] Valid JavaScript code
-- [ ] Semantic HTML5 markup
-- [ ] Font connection
-- [ ] Graphics optimization (vector + raster)
-- [ ] Retina screen support
-- [ ] Image lazy loading
-- [ ] SVG sprite for icons
-- [ ] Favicon
-- [ ] Hover effects for clickable elements
-- [ ] Cursor change to `pointer`
-
----
-
-### Project Structure
-
-- [ ] Header
-- [ ] Hero section
-- [ ] About (about eco-bags)
-- [ ] Advantages
-- [ ] Assortment
-- [ ] Gallery
-- [ ] Feedbacks (customer reviews)
-- [ ] Support (support form)
-- [ ] Footer
-
----
-
-### Header
-
-#### Desktop version
-
-- [ ] Logo (SVG, anchor link)
-- [ ] Navigation menu (6 items, anchor links)
-- [ ] Contact information (phone, email)
-
-#### Mobile/Tablet version
-
-- [ ] Logo (SVG, anchor link)
-- [ ] Burger menu button (`<button type="button">`)
-
----
-
-### Burger Menu
-
-- [ ] Logo
-- [ ] Navigation menu
-- [ ] Contact information
-- [ ] Open/close via `.is-open` class
-
----
-
-### Hero
-
-- [ ] Main heading `<h1>`
-- [ ] Call-to-action text
-- [ ] "Buy Now" button (anchor link)
-- [ ] Content image
-
----
-
-### About
-
-- [ ] Section heading `<h2>`
-- [ ] Subheading
-- [ ] Materials description
-- [ ] Background image
-
----
-
-### Advantages
-
-- [ ] "Advantages" subheading
-- [ ] Section heading `<h2>`
-- [ ] Advantages list `<ul>`
-- [ ] Cards with image, heading, description
-
----
-
-### Assortment
-
-- [ ] Section heading `<h2>`
-- [ ] Product list `<ul>`
-- [ ] Product cards (image, name, description, price)
-- [ ] "Buy" button (`<button type="button">`)
-- [ ] Hover/focus/active effects for button
-
----
-
-### Gallery
-
-- [ ] Section heading `<h2>`
-- [ ] Subheading
-- [ ] Image list `<ul>`
-
----
-
-### Feedbacks
-
-- [ ] Section heading `<h2>`
-- [ ] Reviews list `<ul>`
-- [ ] Rating (5 separate star icons)
-- [ ] Review text
-- [ ] Author
-
----
-
-### Support
-
-- [ ] Section heading `<h2>`
-- [ ] Subheading
-- [ ] "Name" field (required, min=5, max=64)
-- [ ] "Email" field (required, pattern validation)
-- [ ] "Message" field (optional, max=500)
-- [ ] "Send" button (`<button type="submit">`)
-- [ ] Validation via `:valid`/`:invalid`
-- [ ] Background image
-
----
-
-### Footer
-
-- [ ] Logo (SVG, anchor link)
-- [ ] Navigation menu
-- [ ] Social media (Instagram, LinkedIn, YouTube)
-- [ ] Contact information
-- [ ] Copyright
-
----
-
-## 👥 Authors
-
-**EcoTote Development Team**
-
----
-
-## 📄 License
-
-This project is distributed under the MIT License.
-
----
-
-## 🔗 Useful Links
-
-- [Project Figma Design](https://www.figma.com/design/RCf95cRtisUxC8gsNFAFAp/EcoTote?node-id=5999-10563&t=nWranbIbojsrBZff-1)
-- [Technical Specification](https://docs.google.com/spreadsheets/d/1cjTCqYsdTgFdQEhpCfu-b9m1uorSlAUOegU3T4HzVOQ/edit?usp=sharing)
+- [Task](https://www.edu.goit.global/ru/learn/35708569/18936918/20332333/homework)
+- [Figma layout](https://www.figma.com/file/m8k9NQV7qZrtYDCvxfD68B/ДЗ-JavaScript?type=design&node-id=3-969&mode=design)
 - [Stylelint Rules](https://stylelint.io/user-guide/rules)
 - [Code Guide](https://codeguide.co/)
-- [Modern Normalize](https://github.com/sindresorhus/modern-normalize)
-- [HTML Validator](https://validator.w3.org/)
-- [CSS Validator](https://jigsaw.w3.org/css-validator/)
-- [JavaScript Validator](https://jshint.com/)
 
----
+## 📐 Terms of Reference
 
-**Created with ❤️ for the Planet 🌍**
+### Task 1 - Image Gallery
 
+Complete this task in the files `1-gallery.html` and `1-gallery.js`.
+In the previous homework, you created an image gallery using event delegation and added a modal library via CDN to display the full-size image.
+
+Creating galleries is a common developer task, but building them from scratch every time is time‑consuming. That is why libraries exist to handle all the gallery logic.
+
+Build the same gallery, but use the SimpleLightbox library, which will handle image clicks, opening/closing the modal, and keyboard navigation.
+
+Watch the demo video of the gallery.
+
+Pay attention to these details:
+- You no longer need to manually add event delegation, because SimpleLightbox automatically tracks clicks on gallery cards.
+- The BasicLightbox library is no longer needed, since the modal functionality is built into SimpleLightbox.
+- You no longer need CDN links in `index.html`. Install libraries via npm instead.
+
+Complete the task in `1-gallery.html` and `1-gallery.js`. Break it into subtasks:
+
+- Refactor the code from the previous homework. You do not need to rewrite everything from scratch. Creating the gallery elements stays the same, but the delegation and modal code must be removed.
+
+Update the gallery card markup using this template:
+
+```html
+<li class="gallery-item">
+  <a class="gallery-link" href="large-image.jpg">
+    <img
+      class="gallery-image"
+      src="small-image.jpg"
+      alt="Image description"
+    />
+  </a>
+</li>
+```
+
+Add SimpleLightbox as a dependency using npm.
+To include the CSS code of the library, add one more import in addition to the one shown in the docs:
+
+```js
+// In docs
+import SimpleLightbox from 'simplelightbox';
+// Additional styles import
+import 'simplelightbox/dist/simple-lightbox.min.css';
+```
+
+Next, initialize the library after creating and inserting the gallery elements into `ul.gallery`. Review the SimpleLightbox docs, especially the “Usage” and “Markup” sections.
+
+Then, check the “Options” section and enable captions from the `alt` attribute. The caption should appear below the image after 250 ms.
+
+What the mentor will check:
+- The live page shows a gallery built from the `images` array
+- The gallery is styled according to the layout
+- Gallery data is created dynamically in JS
+- No custom event listeners are added
+- SimpleLightbox is connected via npm
+- The library instance is initialized after gallery elements are added to the DOM and outside any functions
+- Clicking a gallery item opens the modal from the library with the enlarged image and all base functionality works
+- After 250 ms, the `alt` text appears below as a caption
+
+### Task 2 - Feedback Form
+
+Complete this task in the files `2-form.html` and `2-form.js`.
+Add the HTML markup for the form. In JS, write a script that saves field values to local storage when the user types.
+
+```html
+<form class="feedback-form" autocomplete="off">
+  <label>
+    Email
+    <input type="email" name="email" autofocus />
+  </label>
+  <label>
+    Message
+    <textarea name="message" rows="8"></textarea>
+  </label>
+  <button type="submit">Submit</button>
+</form>
+```
+
+Break the task into subtasks:
+- Declare an object `formData` outside any functions with fields `email` and `message`, both initially empty: `{ email: "", message: "" }`.
+- Use event delegation to track changes via the `input` event. Store the current values of `email` and `message` in `formData` and write this object to local storage under the key `"feedback-form-state"`.
+- On page load, check if there is data in local storage. If there is, use it to fill the form and `formData`. If not, keep the fields empty.
+- Before submitting, ensure both fields are filled. If any property of `formData` is empty, show an alert with the text `Fill please all fields`. If both are filled, log `formData`, then clear local storage, reset `formData`, and clear the form fields.
+
+What the mentor will check:
+- The live page displays a form with two fields and a submit button
+- The form is styled according to the layout
+- The form listens to `input` and `submit` events
+- While typing, data is saved to local storage under `"feedback-form-state"` without leading/trailing spaces
+- Typing in one field does not delete the other field’s data in storage
+- On page reload, saved data populates the fields and no `undefined` appears
+- On submit, validation ensures both fields are filled
+- On successful submit, the console logs `formData` with current values and storage/fields are cleared
+- After submit, typing again does not restore previous data from storage

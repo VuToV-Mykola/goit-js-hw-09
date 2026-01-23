@@ -6,8 +6,12 @@
   border: 1px solid;
   border-radius: 8px;
 }
+
+.page-gallery .back-link {
+  margin-top: 0px;
+}
 .back-link::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
