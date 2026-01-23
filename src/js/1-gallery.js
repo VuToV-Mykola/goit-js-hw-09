@@ -95,8 +95,15 @@ if (galleryContainer) {
 }
 
 // Ініціалізація лайтбокса з підписами
-new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
-  closeOnImageClick: true,
+});
+
+// Закриття лайтбокса при кліку на зображення
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.sl-image img')) {
+    return;
+  }
+  lightbox.close();
 });
