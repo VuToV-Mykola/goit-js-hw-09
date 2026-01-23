@@ -1,11 +1,11 @@
 {
-  "name": " --base=/<REPO>",
+  "name": "goit-js-hw-09",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "build": "vite build --base=/<REPO>/",
+    "build": "vite build --base=/${npm_package_name}/",
     "preview": "vite preview"
   },
   "devDependencies": {
